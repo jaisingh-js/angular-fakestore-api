@@ -1,0 +1,21 @@
+<div
+  *ngIf="index + 1 && item"
+  class="p-2 d-flex flex-row justify-content-between cart-item"
+>
+  <div>
+    <img class="cart-image" [src]="item.image" [alt]="item.title" />
+    <span class="m-2">{{ item.title }}</span>
+  </div>
+
+  <div>
+    <span class="m-2">Price: {{ item.price }}$</span>
+
+    <button
+      *ngIf="index + 1"
+      (click)="removeElement(index)"
+      class="btn btn-primary"
+    >
+      Remove
+    </button>
+  </div>
+</div>

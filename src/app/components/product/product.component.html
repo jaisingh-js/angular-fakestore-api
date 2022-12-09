@@ -11,5 +11,16 @@
     <strong> Rating: {{ product?.rating?.rate }} </strong>
     <span>({{ product?.rating?.count }})</span>
   </p>
+  <p class="card-text">
+    <strong> Price: {{ product?.price }}$ </strong>
+  </p>
 </div>
-<button class="btn btn-primary">Add to Cart</button>
+
+<div class="d-flex gap-2">
+  <button (click)="addToCart()" class="btn btn-primary w-75">
+    Add to Cart
+  </button>
+  <button routerLink="product/{{ product?.id }}" class="btn btn-primary">
+    View details
+  </button>
+</div>

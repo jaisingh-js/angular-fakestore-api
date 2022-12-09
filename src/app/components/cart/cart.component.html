@@ -1,0 +1,16 @@
+<div
+  class="container border border-dark d-flex flex-column gap-2 p-3"
+  *ngIf="cart"
+>
+  <app-cart-product
+    *ngFor="let item of cart.products; let i = index"
+    [index]="i"
+  ></app-cart-product>
+  <div class="d-flex justify-content-between mt-2">
+    <h5>Items: {{ cart.quantity }}</h5>
+    <h5>Total Price: {{ cart.total | number }}$</h5>
+  </div>
+  <div>
+    <button class="btn btn-primary">Checkout</button>
+  </div>
+</div>

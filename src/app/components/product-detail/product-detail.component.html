@@ -1,13 +1,255 @@
-<div class="container d-flex flex-column bg-light p-5">
-  <img [src]="product?.image" [alt]="product?.title" />
-  <h4 class="mt-3">{{ product?.title }}</h4>
-  <h5>
-    <strong>Rating: {{ product?.rating?.rate }}</strong
-    ><span>({{ product?.rating?.count }})</span>
-  </h5>
-  <h5>
-    <strong>Price: {{ product?.price }}$</strong>
-  </h5>
-  <p class="p-2"><strong>Description: </strong>{{ product?.description }}</p>
-  <button class="btn btn-primary">Buy Now</button>
+<div class="container">
+  <button routerLink="/" class="btn btn-primary">Go Back</button>
+</div>
+
+<div class="container w-75 d-flex justify-content-center align-content-around">
+  <svg
+    *ngIf="!product"
+    class="bg-light"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="margin: auto; background: #fff; display: block"
+    width="250px"
+    height="250px"
+    viewBox="0 0 100 100"
+    preserveAspectRatio="xMidYMid"
+  >
+    <circle cx="75" cy="50" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.9166666666666666s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.9166666666666666s"
+      ></animate>
+    </circle>
+    <circle cx="71.65063509461098" cy="62.5" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.8333333333333334s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.8333333333333334s"
+      ></animate>
+    </circle>
+    <circle cx="62.5" cy="71.65063509461096" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.75s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.75s"
+      ></animate>
+    </circle>
+    <circle cx="50" cy="75" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.6666666666666666s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.6666666666666666s"
+      ></animate>
+    </circle>
+    <circle cx="37.50000000000001" cy="71.65063509461098" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.5833333333333334s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.5833333333333334s"
+      ></animate>
+    </circle>
+    <circle cx="28.34936490538903" cy="62.5" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.5s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.5s"
+      ></animate>
+    </circle>
+    <circle cx="25" cy="50" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.4166666666666667s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.4166666666666667s"
+      ></animate>
+    </circle>
+    <circle cx="28.34936490538903" cy="37.50000000000001" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.3333333333333333s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.3333333333333333s"
+      ></animate>
+    </circle>
+    <circle
+      cx="37.499999999999986"
+      cy="28.349364905389038"
+      fill="#dcfff8"
+      r="5"
+    >
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.25s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.25s"
+      ></animate>
+    </circle>
+    <circle cx="49.99999999999999" cy="25" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.16666666666666666s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.16666666666666666s"
+      ></animate>
+    </circle>
+    <circle cx="62.5" cy="28.349364905389034" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="-0.08333333333333333s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="-0.08333333333333333s"
+      ></animate>
+    </circle>
+    <circle cx="71.65063509461096" cy="37.499999999999986" fill="#dcfff8" r="5">
+      <animate
+        attributeName="r"
+        values="3;3;5;3;3"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        repeatCount="indefinite"
+        begin="0s"
+      ></animate>
+      <animate
+        attributeName="fill"
+        values="#dcfff8;#dcfff8;#00e2ff;#dcfff8;#dcfff8"
+        repeatCount="indefinite"
+        times="0;0.1;0.2;0.3;1"
+        dur="1s"
+        begin="0s"
+      ></animate>
+    </circle>
+  </svg>
+
+  <div
+    *ngIf="product"
+    class="d-flex flex-column flex-wrap bg-light p-3 w-50 border border-dark gap-2"
+  >
+    <img [src]="product.image" [alt]="product.title" class="w-25" />
+    <h5 class="mt-3">
+      <strong>{{ product.title }}</strong>
+    </h5>
+    <h5>
+      Rating: {{ product.rating.rate }}<span>({{ product.rating.count }})</span>
+    </h5>
+    <h5>Price: {{ product.price }}$</h5>
+    <p class="p-2"><strong>Description: </strong>{{ product.description }}</p>
+    <button (click)="addToCart()" class="btn btn-primary">Add to Cart</button>
+  </div>
 </div>
