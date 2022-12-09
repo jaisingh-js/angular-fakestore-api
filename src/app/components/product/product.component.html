@@ -1,0 +1,15 @@
+<div class="d-flex align-content-center justify-content-center h-75">
+  <img
+    class="card-img-top rounded align-self-center"
+    [src]="product?.image"
+    [alt]="product?.title"
+  />
+</div>
+<div class="card-body flex-end">
+  <h5 class="card-title">{{ product?.title }}</h5>
+  <p class="card-text">
+    <strong> Rating: {{ product?.rating?.rate }} </strong>
+    <span>({{ product?.rating?.count }})</span>
+  </p>
+</div>
+<button class="btn btn-primary">Add to Cart</button>

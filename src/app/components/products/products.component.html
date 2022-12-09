@@ -1,0 +1,8 @@
+<section class="row gap-3 d-flex justify-content-center">
+  <app-product
+    class="card col-md-2 p-3 d-flex align-content-center"
+    *ngFor="let product of products"
+    [product]="product"
+    routerLink="product/{{ product.id }}"
+  ></app-product>
+</section>
